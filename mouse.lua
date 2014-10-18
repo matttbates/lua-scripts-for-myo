@@ -26,19 +26,6 @@ function unDragClick()
     	myo.mouse("left", "up")
 end
 
--- Helpers 
-
-function conditionallySwapWave(pose)
-    	if myo.getArm() == "left" then
-        	if pose == "waveIn" then
-            		pose = "waveOut"
-        	elseif pose == "waveOut" then
-            		pose = "waveIn"
-        	end
-    	end
-    	return pose
-end
-
 -- Unlock mechanism 
 
 function unlock()
