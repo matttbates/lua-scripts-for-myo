@@ -80,20 +80,20 @@ function onPoseEdge(pose, edge)
 		end
 	end
 	
--- middle/right click.
-    	if pose == "waveIn" or pose == "waveOut" then
-		pose = conditionallySwapWave(pose)
+-- middle click
+    	if pose == "waveIn" then 
         	if unlocked and edge == "on" then
-            		if pose == "waveIn" then
-                		middleClick()
-            		else
-                		rightClick()
-            		end
+                	middleClick()
+            	end
+	end
+
+-- right click
+	if pose == "waveOut" then
+                if unlocked and edge == "on" then	
+			rightClick()
              	elseif unlocked and edge == "off" then
-            		if pose == "waveOut" then
-                		unRightClick()
-            		end
-        	end
+                	unRightClick()
+            	end
     	end
 
 -- drag click
