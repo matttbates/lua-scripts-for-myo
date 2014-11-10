@@ -33,6 +33,7 @@ end
 function resetDash()
 	curChar = 1
 	curDash = 6
+	myo.vibrate("short")
 end
 
 function dot()
